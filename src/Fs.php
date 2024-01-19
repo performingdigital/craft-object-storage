@@ -140,12 +140,13 @@ class Fs extends FlysystemFs
      */
     protected function addFileMetadataToConfig(array $config): array
     {
-        if (DateTimeHelper::isValidIntervalString($this->expires)) {
+        if (!empty($this->expires) && DateTimeHelper::isValidIntervalString($this->expires)) {
             $expires = new DateTime();
             $now = new DateTime();
             $expires->modify('+' . $this->expires);
             $diff = (int)$expires->format('U') - (int)$now->format('U');
             $config['CacheControl'] = 'max-age=' . $diff;
+            $config['ContentDisposition'] = $this->contentDisposition;
         }
 
         return parent::addFileMetadataToConfig($config);
