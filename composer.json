@@ -1,28 +1,21 @@
 {
-  "name": "fortrabbit/craft-object-storage",
+  "name": "performing/craft-object-storage",
   "description": "A Craft 4 plugin that integrates with fortrabbit's S3 compatible Object Storage",
   "type": "craft-plugin",
   "keywords": [
     "craftcms",
     "flysystem",
-    "fortabbit",
     "object-storage",
     "plugin",
     "s3"
   ],
   "license": "MIT",
-  "authors": [
-    {
-      "name": "Oliver Stark",
-      "homepage": "https://www.fortrabbit.com/"
-    }
-  ],
   "require": {
     "php": "^8.0",
     "craftcms/cms": "^4.0.0",
     "craftcms/flysystem": "^1.0.0",
     "league/flysystem-aws-s3-v3": "^3.0.0",
-    "symfony/console": "^5.1"
+    "symfony/console": "^6.1"
   },
   "require-dev": {
     "craftcms/phpstan": "dev-main",
@@ -30,14 +23,14 @@
   },
   "autoload": {
     "psr-4": {
-      "fortrabbit\\ObjectStorage\\": "src/"
+      "Performing\\ObjectStorage\\": "src/"
     }
   },
   "extra": {
-    "name": "fortrabbit Object Storage Volume",
-    "handle": "fortrabbit-object-storage",
-    "changelogUrl": "https://raw.githubusercontent.com/fortrabbit/craft-object-storage/master/CHANGELOG.md",
-    "downloadUrl": "https://github.com/fortrabbit/craft-object-storage/archive/master.zip"
+    "name": "Performing Object Storage Volume",
+    "handle": "performing-object-storage",
+    "changelogUrl": "https://raw.githubusercontent.com/performing/craft-object-storage/master/CHANGELOG.md",
+    "downloadUrl": "https://github.com/performing/craft-object-storage/archive/master.zip"
   },
   "bin": [
     "bin/object-storage-init"
