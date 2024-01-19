@@ -26,7 +26,7 @@ class Fs extends FlysystemFs
 {
     public static function displayName(): string
     {
-        return 'fortrabbit Object Storage';
+        return 'S3 Compotabile Object Storage';
     }
 
     /**
@@ -60,7 +60,7 @@ class Fs extends FlysystemFs
     public string $expires = '';
 
     /**
-     * @var string fortrabbit endpoint hostname
+     * @var string performing endpoint hostname
      */
     public string $endpoint = '';
     /**
@@ -90,7 +90,7 @@ class Fs extends FlysystemFs
      */
     public function getSettingsHtml(): ?string
     {
-        return Craft::$app->getView()->renderTemplate('fortrabbit-object-storage/fsSettings', [
+        return Craft::$app->getView()->renderTemplate('performing-object-storage/fsSettings', [
             'fs' => $this,
         ]);
     }

@@ -16,7 +16,7 @@ class m220407_172100_rename_type extends Migration
     public function safeUp(): bool
     {
         // Don't make the same changes twice
-        $schemaVersion = Craft::$app->getProjectConfig()->get('plugins.fortrabbit-object-storage.schemaVersion', true);
+        $schemaVersion = Craft::$app->getProjectConfig()->get('plugins.performing-object-storage.schemaVersion', true);
         if (version_compare($schemaVersion, '2.0', '>=')) {
             return true;
         }
