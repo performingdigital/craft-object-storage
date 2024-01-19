@@ -177,6 +177,7 @@ class Fs extends FlysystemFs
             'version'      => 'latest',
             'region'       => App::parseEnv($this->region),
             'endpoint'     => $endpoint,
+            'use_path_style_endpoint' => true,
             'http_handler' => new GuzzleHandler(Craft::createGuzzleClient()),
             'credentials'  => [
                 'key'    => App::parseEnv($this->keyId),
