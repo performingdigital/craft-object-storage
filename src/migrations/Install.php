@@ -1,11 +1,11 @@
 <?php
 
-namespace performing\ObjectStorage\migrations;
+namespace Performing\ObjectStorage\migrations;
 
 use Craft;
 use craft\db\Migration;
 use craft\services\ProjectConfig;
-use performing\ObjectStorage\Fs;
+use Performing\ObjectStorage\Fs;
 
 /**
  * Installation Migration
@@ -19,7 +19,7 @@ class Install extends Migration
         $fsConfigs = $projectConfig->get(ProjectConfig::PATH_FS) ?? [];
 
         foreach ($fsConfigs as $uid => $config) {
-            if ($config['type'] === 'performing\ObjectStorage\Volume') {
+            if ($config['type'] === 'Performing\ObjectStorage\Volume') {
                 $config['type'] = Fs::class;
                 $projectConfig->set(sprintf('%s.%s', ProjectConfig::PATH_FS, $uid), $config);
             }

@@ -1,6 +1,6 @@
 <?php
 
-namespace performing\ObjectStorage\migrations;
+namespace Performing\ObjectStorage\migrations;
 
 use Craft;
 use craft\db\Migration;

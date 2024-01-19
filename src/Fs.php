@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace performing\ObjectStorage;
+namespace Performing\ObjectStorage;
 
 use Aws\Handler\GuzzleV6\GuzzleHandler;
 use Craft;
@@ -24,7 +24,6 @@ use League\MimeTypeDetection\FinfoMimeTypeDetector;
  */
 class Fs extends FlysystemFs
 {
-
     public static function displayName(): string
     {
         return 'fortrabbit Object Storage';

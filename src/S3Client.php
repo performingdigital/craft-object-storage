@@ -1,11 +1,11 @@
 <?php
 
-namespace performing\ObjectStorage;
+namespace Performing\ObjectStorage;
 
 /**
  * Class S3Client
  *
- * @package performing\ObjectStorage
+ * @package Performing\ObjectStorage
  */
 class S3Client extends \Aws\S3\S3Client
 {
