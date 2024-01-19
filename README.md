@@ -1,12 +1,11 @@
-fortrabbit Object Storage Volume for Craft CMS
+S3 compatible Object Storage Volume for Craft CMS
 ==============================================
 
-This plugin provides an [Object Storage](https://help.fortrabbit.com/object-storage) integration for [Craft CMS](https://craftcms.com/).
-
+This is a fork from [https://github.com/fortrabbit/craft-object-storage](https://github.com/fortrabbit/craft-object-storage). I had to make some changes to update dependencies and to work with other S3 service. 
 
 ## Requirements
 
-The 3.0 branch of this plugin requires Craft CMS 4.0 and PHP 8.0 or later. 
+This plugin requires Craft CMS 4.0 and PHP 8.0 or later. 
 
 
 ## Installation
@@ -19,33 +18,23 @@ To install the plugin, follow these instructions.
 ```
 cd /path/to/project
 
-composer require fortrabbit/craft-object-storage
+composer require performing/craft-object-storage
 ```
 
 **2. Update your local .env file** 
-
-Run this command in the terminal to update your .env automatically:
-
 ```
-./vendor/bin/object-storage-init {your-app}
+S3_BASE_URL=https://xxxxx.example.com/path
+S3_ACCESS_KEY_ID=...
+S3_SECRET_ACCESS_KEY=...
+S3_ENDPOINT=https://xxxxx.example.com
+S3_REGION=...
+S3_BUCKET=...
 ```
-
-If it fails for some reason, update your .env file manually. Learn how to [access credentials](https://help.fortrabbit.com/object-storage#toc-obtaining-credentials) on fortrabbit.
-
-```
-OBJECT_STORAGE_BUCKET="(YOUR_APP_NAME)"
-OBJECT_STORAGE_HOST="(YOUR_APP_NAME).objects.frb.io"
-OBJECT_STORAGE_KEY="(YOUR_APP_NAME)"
-OBJECT_STORAGE_REGION="(us-east-1|eu-west-1)"
-OBJECT_STORAGE_SECRET="(OBJECT_STORAGE_SECRET)"
-OBJECT_STORAGE_SERVER="objects.(us1|eu2).frbit.com"
-```
-
 
 
 **3. Install the plugin**
 ```
-./craft plugin/install fortrabbit-object-storage
+./craft plugin/install performing-object-storage
 ```
 
 Or browse to  CP > Settings > Plugins to enable the plugin.
@@ -55,7 +44,7 @@ Or browse to  CP > Settings > Plugins to enable the plugin.
 
 Configure volumes under: Settings > Assets > **[New Volume]**.  
 
-Select `fortrabbit Object Storage` as Volume Type and for the Base URL field use `$OBJECT_STORAGE_HOST` ENV variable. 
+Select `S3 Compatible Object Storage` as Volume Type and for the Base URL field use `$OBJECT_STORAGE_HOST` ENV variable. 
 All other fields are pre-configured with ENV vars already. 
 
 
