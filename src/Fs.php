@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace fortrabbit\ObjectStorage;
+namespace performing\ObjectStorage;
 
 use Aws\Handler\GuzzleV6\GuzzleHandler;
 use Craft;

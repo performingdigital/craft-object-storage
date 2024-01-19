@@ -1,6 +1,6 @@
 <?php
 
-namespace fortrabbit\ObjectStorage\migrations;
+namespace performing\ObjectStorage\migrations;
 
 use Craft;
 use craft\db\Migration;

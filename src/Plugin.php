@@ -1,6 +1,6 @@
 <?php
 
-namespace fortrabbit\ObjectStorage;
+namespace performing\ObjectStorage;
 
 use craft\events\RegisterComponentTypesEvent;
 use craft\services\Fs as FsService;
@@ -8,7 +8,7 @@ use yii\base\Event;
 
 /**
  * fortrabbit Object Storage plugin
- * provides a fortrabbit\ObjectStorage\Fs
+ * provides a performing\ObjectStorage\Fs
  */
 class Plugin extends \craft\base\Plugin
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace fortrabbit\ObjectStorage;
+namespace performing\ObjectStorage;
 
 /**
  * Class S3Client
  *
- * @package fortrabbit\ObjectStorage
+ * @package performing\ObjectStorage
  */
 class S3Client extends \Aws\S3\S3Client
 {
